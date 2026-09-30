@@ -1,99 +1,111 @@
-# Smart Tourist Safety Monitoring & Incident Response System
+# 🌱 RescuEats: AI-Powered Food Waste Reduction & Sustainable Redistribution Ecosystem
 
 [![SIH Hackathon](https://img.shields.io/badge/SIH-2026-blue.svg)](https://sih.gov.in)
-[![Blockchain](https://img.shields.io/badge/Blockchain-Polygon%20Consortium-purple.svg)](https://polygon.technology)
-[![AI Engine](https://img.shields.io/badge/AI-Multi--Agent%20Consensus-green.svg)](https://deepmind.google)
+[![Tech Stack](https://img.shields.io/badge/Stack-MERN%20%2B%20GenAI%20%2B%20IoT-emerald.svg)](#-tech-stack)
+[![AI Engine](https://img.shields.io/badge/AI-Multi--Agent%20Consensus%20%2B%20Judge-purple.svg)](#-multi-agent-ai-architecture)
+[![Compliance](https://img.shields.io/badge/Compliance-FSSAI%202019%20%26%20ESG-teal.svg)](#-regulatory--esg-compliance)
 
-A robust, multi-tier safety ecosystem leveraging **Generative AI, Geo-Fencing, and Blockchain-based Digital Tourist IDs** to provide real-time tourist monitoring, rapid incident response, and tamper-proof legal evidence logging in high-risk & remote regions.
-
----
-
-## 🌟 Key Pillars & Features
-
-* **Sovereign Blockchain Digital Tourist ID (W3C DID)**
-  - Mint verifiable digital passes (`did:sih:ne:0x...`) at airports, hotels, and checkposts.
-  - Zero-Knowledge Privacy (ZKP) seal preserving DPDP Act 2023 compliance—no raw Aadhaar/Passport PII stored on-chain.
-  - 100% offline asymmetric public-key QR code verification for dead-zone checkposts.
-
-* **Multi-Agent Generative AI Engine**
-  - **Token Pre-Filtering:** Deterministic rules engine drops 99% of normal telemetry to minimize API token costs.
-  - **Semantic Vector Caching (Pinecone):** Deduplicates identical multi-casualty incident alerts (e.g. bus crash) with 0 extra tokens.
-  - **Multi-LLM Consensus:** Gemini 1.5 Flash (Fast Triage) ➔ Gemini 1.5 Pro (Judge Reasoning) to eliminate false positives.
-  - **Automated E-FIR Generator:** Uses Blockchain RAG to fetch verified medical profiles and auto-drafts legally compliant E-FIRs.
-
-* **Dual-Mode Telemetry & Dead-Zone Fallback**
-  - High-throughput WebSocket stream for 4G/Wi-Fi zones.
-  - Long-range **SX1276 LoRaWAN radio relay (5–10km)** for IoT Smart Safety Bands in zero-internet forest/mountain zones.
-
-* **Police GIS Command Center & Duty SHO e-Sign**
-  - Real-time tourist heatmaps, alert triage queue, and unit routing.
-  - **BNSS / CrPC Admissibility:** Human-in-the-loop Duty SHO cryptographic e-Sign before official lodging.
+An enterprise-grade, real-time technological ecosystem that combines **Multimodal GenAI**, **Multi-Agent Orchestration (with an independent Safety Judge Arbiter)**, **IoT Cold-Chain Telemetry**, and **Geo-Spatial Logistics (MongoDB 2DSphere)** to minimize food waste and optimize food resource utilization across institutional kitchens and food processing units.
 
 ---
 
-## 🏗️ System Architecture
+## 🌟 The 4-Stage Waste Elimination Lifecycle
 
 ```
-┌─────────────────────────────────────────────────────────────────────────┐
-│              TIER 1: CLIENT & EDGE INTERFACE LAYER                      │
-│   Tourist PWA App  │  Checkpoint Kiosk  │  Police GIS  │  IoT Smart Band│
-└────────────────────────────────────┬────────────────────────────────────┘
-                                     │
-┌────────────────────────────────────▼────────────────────────────────────┐
-│              TIER 2: API & TELEMETRY GATEWAY LAYER                      │
-│   NGINX API Gateway │ WebSocket Cluster │ LoRaWAN Basecamp Gateway      │
-└────────────────────────────────────┬────────────────────────────────────┘
-                                     │
-┌────────────────────────────────────▼────────────────────────────────────┐
-│         TIER 3: MULTI-AGENT AI CORE & GEN AI PIPELINE                   │
-│   1. Telemetry Filter  │ 2. Semantic Vector Cache (0-Token Resolver)   │
-│   3. Triage LLM (Flash)│ 4. Judge LLM (Pro)  │ 5. Auto E-FIR Dispatcher│
-└────────────────────────────────────┬────────────────────────────────────┘
-                                     │
-┌────────────────────────────────────▼────────────────────────────────────┐
-│         TIER 4: DUAL STORAGE & SOVEREIGN BLOCKCHAIN LAYER               │
-│   Off-Chain Encrypted DB (PostGIS)  │ Sovereign 5-Node Consortium Chain  │
-└─────────────────────────────────────────────────────────────────────────┘
+┌────────────────────────────────────────────────────────────────────────┐
+│ STAGE 1: PREDICT & PREVENT (Before Cooking)                            │
+│ - AI Predictive Demand Forecaster analyzes headcount & past logs.      │
+│ - Prevents overcooking at source (saving ~12% in raw ingredients).    │
+└───────────────────────────────────┬────────────────────────────────────┘
+                                    │
+┌───────────────────────────────────▼────────────────────────────────────┐
+│ STAGE 2: INSPECT & PROTECT (During Operation)                          │
+│ - Multimodal Gemini 1.5 Flash Vision inspects freshness (0–100%).      │
+│ - OCR reads printed expiry labels; visual spoilage detection.          │
+│ - IoT Telemetry Hub streams cold-room temperatures via WebSockets.     │
+└───────────────────────────────────┬────────────────────────────────────┘
+                                    │
+┌───────────────────────────────────▼────────────────────────────────────┐
+│ STAGE 3: AUTONOMOUS REDISTRIBUTION (When Surplus Occurs)               │
+│ - MongoDB 2DSphere spatial engine matches nearest verified NGOs.       │
+│ - Safety Judge Agent verifies IoT thermal history & transit safe hours.│
+│ - Instant WebSocket broadcast & Redis distributed lock claim.          │
+└───────────────────────────────────┬────────────────────────────────────┘
+                                    │
+┌───────────────────────────────────▼────────────────────────────────────┐
+│ STAGE 4: ESG & SUSTAINABILITY AUDIT (After Delivery)                   │
+│ - Calculates carbon footprint avoided (1 kg food = 2.5 kg CO₂e).       │
+│ - Quantifies water footprint conserved (1 kg = 1,450 L).               │
+│ - Auto-generates official FSSAI-compliant ESG Audit Certificates.      │
+└────────────────────────────────────────────────────────────────────────┘
 ```
+
+---
+
+## 🧠 Multi-Agent AI Core (4-Agent Architecture)
+
+1. **Kitchen Analyst & Vision Agent (Gemini 1.5 Flash)**:
+   - Evaluates daily cooking prep quantities.
+   - Zero-shot visual food inspection and printed expiry date OCR.
+   - **Semantic Vector Cache**: Deduplicates identical recurring dish analyses at **0 token cost**.
+
+2. **Autonomous Redistribution Dispatch Agent**:
+   - Queries MongoDB with **2DSphere indexing** (`$near` within 8 km).
+   - Manages safe consumption countdown windows and vehicle routing.
+
+3. **Safety Judge & Arbiter Agent (Consensus Engine)**:
+   - Cross-correlates visual freshness against **IoT cold-storage temperature history**.
+   - Verifies transit drive time is strictly shorter than safe consumption shelf-life.
+   - Eliminates false positives, food poisoning risks, and AI hallucinations.
+
+4. **Sustainability & ESG Auditor Agent**:
+   - RAG-grounded in **FSSAI Food Recovery Regulations (2019)**.
+   - Auto-computes greenhouse gas offsets and generates downloadable PDF certificates.
+
+---
+
+## 🏛️ System Design & Distributed Systems Highlights
+
+* **Distributed Mutex Locking (Redis Redlock)**: Prevents race conditions when multiple NGOs attempt to claim the same surplus batch simultaneously.
+* **Circuit Breaker Pattern**: Gracefully degrades to deterministic FSSAI category lifetime rules if cloud AI APIs face latency or outages.
+* **Spatial 2DSphere Indexing**: $O(\log N)$ geo-spatial lookups on GeoJSON coordinates for instant radius queries.
+* **Hot/Cold Storage Tiering**: Real-time IoT sensor telemetry cached in Redis, stored in MongoDB with **TTL auto-purge (7 days)**, and summarized into cold historical archives.
+* **WebSocket Duplex Pipeline**: Low-latency event broadcasts for temperature alarms and surplus alerts.
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **Frontend:** React.js, Vite, TailwindCSS, Lucide Icons, Leaflet.js / Mapbox
-* **Backend:** Node.js, Express, WebSockets (`ws`), Ethers.js, CryptoJS
-* **Blockchain:** Polygon Amoy Testnet / Consortium PoA Network, Solidity Smart Contracts
-* **AI & Vector DB:** Gemini 1.5 Flash / Pro, LangChain, Pinecone Vector DB
-* **IoT Hardware:** ESP32 Microcontroller, MPU6050 (Fall Sensor), MAX30102 (Pulse Oximeter), SX1276 LoRaWAN Transceiver
+* **Frontend**: React 18, Vite, Tailwind CSS, Lucide Icons, Recharts, Canvas-Confetti
+* **Backend**: Node.js, Express.js, Socket.io, Multer
+* **Database & Caching**: MongoDB Atlas (2DSphere GeoJSON), Redis
+* **AI & Vision**: Google Gemini 1.5 Flash Vision, Semantic Vector Cache, Multi-Agent Consensus
+* **IoT Hardware Simulation**: WebSocket Telemetry Hub (ESP32 + DHT11 temperature & humidity simulation)
+* **Logistics Engine**: OSRM / Haversine Distance & Route Optimization
 
 ---
 
 ## 🚀 Quickstart & Running Locally
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/iHanumanBhakt/SmartTouristSafetyMontoring.git
-   cd SmartTouristSafetyMontoring
-   ```
+### 1. Start the Backend API & WebSocket Gateway:
+```bash
+cd server
+npm install
+npm start
+```
+The server will boot on `http://localhost:5000` with WebSockets and the 4 AI Agents initialized.
 
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-
-3. **Start the local development server:**
-   ```bash
-   npm run dev
-   ```
-
-4. **Build for production:**
-   ```bash
-   npm run build
-   ```
+### 2. Start the Frontend React Client:
+```bash
+# In the root project directory:
+npm install
+npm run dev
+```
+Open `http://localhost:5173` in your browser.
 
 ---
 
-## ⚖️ Legal & Privacy Compliance
+## ⚖️ Regulatory & ESG Compliance
 
-* **DPDP Act 2023:** Sensitive PII and medical records are stored in encrypted off-chain vaults. Only SHA-256 hashes & W3C DIDs are anchored on-chain. Ephemeral credentials auto-expire at itinerary end.
-* **BNSS / CrPC:** Draft E-FIRs require explicit human Duty SHO cryptographic signatures to ensure court admissibility.
+* **FSSAI (Recovery and Distribution of Surplus Food) Regulations, 2019**: Built-in verification ensuring hot foods remain $> 65^\circ\text{C}$ and cold foods remain $< 8^\circ\text{C}$.
+* **BRSR (Business Responsibility and Sustainability Reporting)**: Automated emission reduction accounting for corporate sustainability reporting.
